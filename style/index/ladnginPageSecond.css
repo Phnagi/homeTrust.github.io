@@ -1,0 +1,142 @@
+.indexSecondBox {
+  position: absolute;
+  height: 80dvh;
+  width: 100%;
+  background-color: #5D7B9D;
+  z-index: -1;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.indexSecondBox .indexWelcomeBox {
+  opacity: 0;
+  width: 100%;
+  height: 70dvh;
+  margin: 40px 60px 0px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  transform-origin: left;
+  transition: transform 0.5s ease-in 0s, opacity 0.5s ease-in 0.2s;
+}
+.indexSecondBox .indexWelcomeBox .WelcomeTitle {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-family: "Noto Sans TC";
+  font-size: 96px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 17.92px;
+}
+@media (max-width: 768px) {
+  .indexSecondBox .indexWelcomeBox .WelcomeTitle {
+    font-size: 64px;
+  }
+}
+@media (max-width: 576px) {
+  .indexSecondBox .indexWelcomeBox .WelcomeTitle {
+    font-size: 48px;
+  }
+}
+.indexSecondBox .indexWelcomeBox .WelcomeSubTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-family: "Noto Sans TC";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 9.6px;
+  margin: 0;
+  padding: 0;
+}
+@media (max-width: 768px) {
+  .indexSecondBox .indexWelcomeBox .WelcomeSubTitle {
+    font-size: 32px;
+  }
+}
+@media (max-width: 576px) {
+  .indexSecondBox .indexWelcomeBox .WelcomeSubTitle {
+    font-size: 24px;
+  }
+}
+.indexSecondBox .indexWelcomeBox .WelcomeSubTitle p {
+  margin: 0;
+  padding: 0;
+}
+.indexSecondBox .indexWelcomeBox .WelcomeText {
+  margin-top: 20px;
+  width: 552px;
+  color: rgb(255, 255, 255);
+  font-family: "Noto Sans TC";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 217%; /* 30.38px */
+  letter-spacing: 2px;
+}
+@media (max-width: 768px) {
+  .indexSecondBox .indexWelcomeBox .WelcomeText {
+    width: 400px;
+    margin-top: 10px;
+  }
+}
+@media (max-width: 576px) {
+  .indexSecondBox .indexWelcomeBox .WelcomeText {
+    width: 240px;
+    margin-top: 10px;
+  }
+}
+.indexSecondBox .indexWelComeBtn {
+  position: relative;
+  left: 60px;
+  width: 80px;
+  height: 80px;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-origin: left;
+  transition: transform 0.5s ease-in 0s, opacity 0.5s ease-in 0.2s;
+}
+.indexSecondBox .indexWelComeBtn a {
+  z-index: 5;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  width: 80px;
+  height: 80px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 100%;
+  font-family: "Noto Sans TC";
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 2px;
+  transition: 0.5s ease-in-out;
+}
+.indexSecondBox .indexWelComeBtn a:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+
+.indexWelcomeBox.indexWelcomeBoxAct {
+  opacity: 1;
+}
+
+.indexWelComeBtn.indexWelcomeBoxAct {
+  opacity: 1;
+}/*# sourceMappingURL=ladnginPageSecond.css.map */

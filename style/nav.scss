@@ -1,0 +1,308 @@
+nav{
+
+    position: fixed;
+    z-index: 10;
+    // background-color: antiquewhite;
+    width: 100%;
+    height: 100px;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .navContainer{
+        // background-color: antiquewhite;
+        position: relative;
+        z-index: 10;
+        width: 100%;
+        margin: 0 60px 0 60px;
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .navLogoBox{
+            position: relative;
+            height: 60px;
+            width: 60px;
+
+            .navLogo{
+                position: absolute;
+                
+                height: 60px;
+            }
+            .navLogoW{
+                opacity: 0;
+                transition: 0.5s ease-in-out;
+            }
+            .navLogoB{
+                opacity: 0;
+                transition: 0.5s ease-in-out;
+            }
+        }
+
+        .pcNav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            // background-color: aqua;
+            list-style: none;
+            width: 65%;
+            height: 100%;
+            li{
+                color: #FFF;
+
+                font-family: "Noto Serif TC";
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                letter-spacing: 6.3px;
+                .pcNavElementText{
+                    text-decoration: none;
+                    color: white;
+                }
+            }
+            .hamburgerBtn{
+                position: relative;
+                width: 40px;
+                height: 40px;
+                // border: 1px solid white;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                input{
+                    position: absolute;
+                    top: -20px;
+                    opacity: 0;
+                    
+                }
+                .hamburgerBox{
+                    cursor: pointer;
+                    position: absolute;
+                    display: flex;
+                    width: 40px;
+                    height: 40px;
+                    border: 1.5px solid white;
+                    border-radius: 0%;
+              
+                    transform: rotate(0deg);
+                    transition:border-radius 0.5s ease-out 0s,border 0.5s ease-out 0s ,transform 0.5s ease-in-out 0.2s, ;
+
+                    z-index: 11;
+
+                }
+                .navDotBox{
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    pointer-events: fill;
+                    width: 40px;
+                    height: 40px;
+                    .navDot{
+                        position: relative;
+                        width: 5px;
+                        height: 5px;
+                        background-color: #FFF;
+                        border-radius: 100%;
+                        pointer-events: fill;
+                        transition: 0.5s ease-in-out;
+                    }
+                    .navDot1{
+                        left: 0px;
+                        width: 5px;
+                        height:5px;
+                        border-radius: 100%;
+                        transform: rotate(0deg);
+                        transition: left 0.2s ease-in-out 0.5s, width 0.5s ease-in-out 0s,height 0.5s ease-in-out 0s,border-radius 0.5s ease-in-out 0s,transform 0.5s ease-in-out 0s ;
+                    }
+                    .navDot2{
+                        opacity: 1;
+                        transition: 0.5s ease-in-out;
+                    }
+                    .navDot3{
+                        right: 0px;
+                        width: 5px;
+                        height:5px;
+                        border-radius: 100%;
+                        transform: rotate(0deg);
+                        transition: right 0.2s ease-in-out 0.5s, width 0.5s ease-in-out 0s,height 0.5s ease-in-out 0s,border-radius 0.5s ease-in-out 0s,transform 0.5s ease-in-out 0s ;
+                    }
+                }
+
+
+                &:hover{
+
+                    .hamburgerBox{
+                        border-radius: 100%;
+                        transform: rotate(90deg);
+                        transition:transform 0.5s ease-out 0s,border 0.5s ease-out 0s ,border-radius 0.5s ease-in-out 0.2s;
+                    }
+                    .navDotBox{
+                        .navDot1{
+                            // animation:bounce 1s 0s ;
+                         }
+                         .navDot2{
+                            //  animation:bounce 1s 0.2s ;
+                         }
+                          .navDot3{
+                            //  animation:bounce 1s 0.4s ;
+                         }
+                    }
+
+
+                    
+
+                }
+                input:checked+.navDotBox .navDot1 {
+
+                    left: 11px;
+                    width: 20px;
+                    height: 2px;
+                    border-radius: 0%;
+                    transform: rotate(45deg);
+                    transition: left 0.2s ease-in-out 0s, width 0.5s ease-in-out 0.2s,height 0.5s ease-in-out 0.2s,border-radius 0.5s ease-in-out 0.2s,transform 0.5s ease-in-out 0.2s ;
+                }
+                input:checked+.navDotBox .navDot3 {
+
+                    right: 11px;
+                    width: 20px;
+                    height: 2px;
+                    border-radius: 0%;
+                    transform: rotate(-45deg);
+                    transition: right 0.2s ease-in-out 0s, width 0.5s ease-in-out 0.2s,height 0.5s ease-in-out 0.2s,border-radius 0.5s ease-in-out 0.2s,transform 0.5s ease-in-out 0.2s ;
+                }
+                input:checked+.navDotBox .navDot2 {
+
+            
+                    opacity: 0;
+                }
+            }
+        }
+    }
+
+
+    .mobileNav{
+        position: absolute;
+        z-index: 9;
+        top: 0;
+        background-color: #5D7B9D;
+        width: 100%;
+        height: 100dvh;
+        transform: translateY(-100dvh);
+        opacity: 0;
+        transition: 0.5s ease-in;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
+
+        .mobileNavBox{
+            width: 100%;
+            margin: 0 60px 0 60px;
+            height: calc(100dvh - 100px);
+            // background-color: rgb(41, 185, 185);
+            ul{
+                list-style: none;
+            }
+            .navMainList{
+                // background-color: rgb(43, 185, 41);
+                width: 100%;
+                height: 70%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                li{
+                    height: 12%;
+                    width: 100%;
+                    padding: 0;
+                    margin: 0;
+                    display: flex;
+                    align-items: center;
+
+                    a{
+                        color: #FFF;
+                        text-decoration: none;
+                        font-family: "Noto Serif TC";
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                        letter-spacing: 12px;
+
+                        padding: 0;
+                        margin: 0;
+                    }
+                }
+            }
+            .navSocialList{
+                width: 100%;
+                height: 30%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                // background-color: rgb(43, 185, 41);
+                
+                li{
+                    height: 20%;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    padding: 0;
+                    margin: 0;
+                    a{
+                        color: #FFF;
+                        // text-decoration: none;
+                        font-family: "Noto Serif TC";
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                        letter-spacing: 4px;
+
+                        padding: 0;
+                        margin: 0;
+
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+.mobileNav.mobileNavAct{
+    width: 100%;
+    height: 100dvh;
+    background-color: #5D7B9D;
+    transform: translateY(0dvh);
+    opacity: 1;
+}
+
+.hamburgerBox.hamburgerBoxChangeColorW{
+    border: 1.5px solid rgb(0, 0, 0) !important;
+}
+
+.navDot.navDotChangeColorW{
+    background-color: #000000 !important;
+}
+.pcNavElementText.textChangeColorB{
+    color: #000000 !important;
+}
+
+.navLogoW.navLogoOpacity{
+    opacity: 1 !important;
+}
+.navLogoB.navLogoOpacity{
+    opacity: 1 !important;
+}
+
+.navDotAni{
+    animation:bounce 1s 0s ;
+}
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+	40% {transform: translateY(-5px);}
+	60% {transform: translateY(-2px);}
+}
