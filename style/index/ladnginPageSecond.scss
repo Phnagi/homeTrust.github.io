@@ -1,153 +1,148 @@
-$white:rgb(255, 255, 255);
-$black:rgb(0, 0, 0);
-$backgroundMain:#5D7B9D;
-$textColor:rgb(255, 255, 255);
-.indexSecondBox{
-    position: absolute;
-    height: 80dvh;
+$white: rgb(255, 255, 255);
+$black: rgb(0, 0, 0);
+$backgroundMain: #5d7b9d;
+$textColor: rgb(255, 255, 255);
+.indexSecondBox {
+  position: absolute;
+  height: 80dvh;
+  width: 100%;
+  background-color: #5d7b9d;
+  z-index: -1;
+  // pointer-events:none;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  .indexWelcomeBox {
+    opacity: 0;
     width: 100%;
-    background-color: #5D7B9D;
-    z-index: -1;
-    // pointer-events:none;
-    overflow: hidden;
+    height: 70dvh;
+    margin: 40px 60px 0px 60px;
+    // background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    // transform: perspective(500px) scale3d(-0.2,1,-0.5);
+    transform-origin: left;
+    transition: transform 0.5s ease-in 0s, opacity 0.5s ease-in 0.2s;
+    .WelcomeTitle {
+      color: $textColor;
+
+      text-align: center;
+      font-family: "Noto Sans TC";
+      font-size: 96px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: 17.92px;
+      @media (max-width: 768px) {
+        font-size: 64px;
+      }
+      @media (max-width: 576px) {
+        font-size: 48px;
+      }
+    }
+    .WelcomeSubTitle {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      color: $textColor;
+
+      text-align: center;
+      font-family: "Noto Sans TC";
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: 9.6px;
+      margin: 0;
+      padding: 0;
+      @media (max-width: 768px) {
+        font-size: 32px;
+      }
+      @media (max-width: 576px) {
+        font-size: 24px;
+      }
+      p {
+        margin: 0;
+        padding: 0;
+      }
+    }
+    .WelcomeText {
+      margin-top: 20px;
+      width: 552px;
+      // height: 143px;
+      color: $textColor;
+      font-family: "Noto Sans TC";
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 217%; /* 30.38px */
+      letter-spacing: 2px;
+      @media (max-width: 768px) {
+        width: 400px;
+        margin-top: 10px;
+      }
+      @media (max-width: 576px) {
+        width: 240px;
+        margin-top: 10px;
+      }
+    }
+  }
+  .indexWelComeBtn {
+    position: relative;
+    left: 60px;
+    width: 80px;
+    height: 80px;
+    opacity: 0;
     display: flex;
     justify-content: center;
-    flex-direction: column;
-    .indexWelcomeBox{
+    align-items: center;
+    transform-origin: left;
+    transition: transform 0.5s ease-in 0s, opacity 0.5s ease-in 0.2s;
+    a {
+      z-index: 5;
+      cursor: pointer;
+      padding: 0;
+      margin-left: 2px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      color: $textColor;
 
-        opacity: 0;
-        width: 100%;
-        height: 70dvh;
-        margin: 40px 60px 0px 60px;
-        // background-color: rgb(255, 255, 255);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
+      width: 80px;
+      height: 80px;
+      border: 1px solid $textColor;
+      border-radius: 100%;
 
-        // transform: perspective(500px) scale3d(-0.2,1,-0.5);
-        transform-origin: left;
-        transition:transform 0.5s ease-in 0s,opacity 0.5s ease-in 0.2s;
-        .WelcomeTitle{
-            color: $textColor;
-
-            text-align: center;
-            font-family: "Noto Sans TC";
-            font-size: 96px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
-            letter-spacing: 17.92px;
-            @media(max-width: 768px){
-                font-size: 64px;
-            }
-            @media(max-width: 576px){
-                font-size: 48px;
-            }
-        }
-        .WelcomeSubTitle{
-
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-            color: $textColor;
-
-            text-align: center;
-            font-family: "Noto Sans TC";
-            font-size: 40px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
-            letter-spacing: 9.6px;
-            margin: 0;
-            padding:0;
-            @media(max-width: 768px){
-                font-size: 32px;
-            }
-            @media(max-width: 576px){
-                font-size: 24px;
-            }
-            p{
-                margin: 0;
-                padding:0;
-            }
-        }
-        .WelcomeText{
-            margin-top: 20px;
-            width: 552px;
-            // height: 143px;
-            color: $textColor;
-            font-family:"Noto Sans TC";
-            font-size: 12px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 217%; /* 30.38px */
-            letter-spacing: 2px;
-            @media(max-width: 768px){
-                width: 400px;
-                margin-top: 10px;
-            }
-            @media(max-width: 576px){
-                width: 240px;
-                margin-top: 10px;
-            }
-        }
+      font-family: "Noto Sans TC";
+      font-size: 10px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      letter-spacing: 2px;
+      transition: 0.5s ease-in-out;
     }
-    .indexWelComeBtn{
-        position: relative;
-        left: 60px;
-        width: 80px;
-        height: 80px;
-        opacity: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transform-origin: left;
-        transition:transform 0.5s ease-in 0s,opacity 0.5s ease-in 0.2s;
-        a{
-            z-index: 5;
-            cursor: pointer;
-            padding: 0;
-            margin-left: 2px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-decoration: none;
-            color: $textColor;
-
-            width: 80px;
-            height: 80px;
-            border: 1px solid $textColor;
-            border-radius: 100%;
-
-            font-family: "Noto Sans TC";
-            font-size: 10px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
-            letter-spacing: 2px;
-            transition: 0.5s ease-in-out;
-        }
-        a:hover{
-            background-color: $textColor;
-            color: $black;
-        }
+    a:hover {
+      background-color: $textColor;
+      color: $black;
     }
+  }
 }
 
-.indexWelcomeBox.indexWelcomeBoxAct{
-    // transform: perspective(500px) scale3d(1,1,1);
-    opacity: 1;
+.indexWelcomeBox.indexWelcomeBoxAct {
+  // transform: perspective(500px) scale3d(1,1,1);
+  opacity: 1;
 }
 
-.indexWelComeBtn.indexWelcomeBoxAct{
-    opacity: 1;
+.indexWelComeBtn.indexWelcomeBoxAct {
+  opacity: 1;
 }
 
-
-.indexSecondBox:hover{
-  
-
-//   background-color: rgb(22, 69, 53);
+.indexSecondBox:hover {
+  //   background-color: rgb(22, 69, 53);
 }

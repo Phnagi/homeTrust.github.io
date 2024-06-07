@@ -1,25 +1,32 @@
 .indexService {
   position: absolute;
   top: 230dvh;
-  height: 300dvh;
+  height: 500dvh;
   width: 100%;
-  background-color: #5D7B9D;
+  background-color: #5d7b9d;
   z-index: -1;
   overflow: hidden;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   transition: 0.5s ease-in-out;
 }
 .indexService .indexServiceTitleBox {
   opacity: 0;
   position: relative;
-  top: 40dvh;
+  margin-top: 40dvh;
   width: 100%;
-  margin: 40px 60px 0px 60px;
+  padding: 40px 160px 0px 160px;
   height: 20dvh;
   display: flex;
   justify-content: space-between;
   transition: 0.5s ease-in-out;
+}
+@media (max-width: 900px) {
+  .indexService .indexServiceTitleBox {
+    padding: 40px 60px 0px 60px;
+    justify-content: center;
+  }
 }
 .indexService .indexServiceTitleBox .indexServiceTitleL {
   width: 40%;
@@ -67,6 +74,352 @@
   line-height: 140%; /* 30.38px */
   letter-spacing: 2px;
 }
+.indexService .servingBoxOne {
+  position: relative;
+  width: 100%;
+  height: 110dvh;
+  top: 20dvh;
+  padding: 0px 60px 0px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+@media (max-width: 900px) {
+  .indexService .servingBoxOne {
+    padding: 0px 60px 0px 60px;
+    justify-content: center;
+  }
+}
+.indexService .servingBoxOne .servingImg {
+  position: relative;
+  width: 800px;
+  height: 450px;
+  padding: 0px 100px 0px 100px;
+}
+@media (max-width: 1120px) {
+  .indexService .servingBoxOne .servingImg {
+    width: 600px;
+    height: 400px;
+    padding: 0px 0px 0px 0px;
+  }
+}
+@media (max-width: 900px) {
+  .indexService .servingBoxOne .servingImg {
+    width: 100%;
+    padding: 0px 0px 0px 0px;
+  }
+}
+.indexService .servingBoxOne .servingImg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.indexService .servingBoxOne .servingContentBox {
+  align-self: self-end;
+  position: relative;
+  width: 50%;
+  height: 20dvh;
+  display: flex;
+  flex-direction: row;
+  padding: 50px 100px 0px 100px;
+}
+@media (max-width: 900px) {
+  .indexService .servingBoxOne .servingContentBox {
+    width: 100%;
+    padding-top: 5%;
+    padding: 50px 0px 0px 0px;
+  }
+}
+.indexService .servingBoxOne .servingContentBox .servingContentL {
+  position: relative;
+  width: 30px;
+  color: #2c5491;
+  font-family: "Noto Sans TC";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 1.92px;
+}
+.indexService .servingBoxOne .servingContentBox .servingContentL::after {
+  position: absolute;
+  width: 1.5px;
+  height: 50px;
+  content: "";
+  background-color: #2c5491;
+  top: 25px;
+  left: 6px;
+}
+.indexService .servingBoxOne .servingContentBox .servingContentR {
+  position: relative;
+  width: calc(100% - 9px);
+  top: -8px;
+  display: flex;
+  flex-direction: column;
+}
+.indexService .servingBoxOne .servingContentBox .servingContentR .servingTitle {
+  color: rgb(0, 0, 0);
+  font-family: "Noto Sans TC";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 8px;
+  padding: 0;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.indexService .servingBoxOne .servingContentBox .servingContentR .servingContent {
+  color: #252525;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%; /* 30.38px */
+  letter-spacing: 2px;
+  padding: 0;
+  margin: 0;
+}
+.indexService .servingBoxOne .servingContentBox .servingContentR .servingContentMore {
+  letter-spacing: 1.68px;
+  width: 150px;
+  align-self: self-end;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  transition: 0.5s ease-in-out;
+}
+.indexService .servingBoxOne .servingContentBox .servingContentR .servingContentMore .servingMoreLineL {
+  position: relative;
+  content: "";
+  width: 60px;
+  height: 2px;
+  background-color: #2c5491;
+  top: 2px;
+}
+.indexService .servingBoxOne .servingContentBox .servingContentR .servingContentMore .servingMoreLineL::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background-color: #c3c3c3;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+.indexService .servingBoxOne .servingContentBox .servingContentR .servingContentMore a {
+  position: relative;
+  font-family: "Noto Sans TC";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: #2c5491;
+  text-decoration: none;
+  transition: 0.5s ease-in-out;
+}
+.indexService .servingBoxOne .servingContentBox .servingContentR .servingContentMore .servingMoreLineR {
+  position: relative;
+  content: "";
+  width: 40px;
+  height: 2px;
+  background-color: #2c5491;
+  top: 2px;
+  transition: 0.5s ease-in-out;
+}
+.indexService .servingBoxOne .servingContentBox .servingContentR .servingContentMore .servingMoreLineR::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background-color: #c3c3c3;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+.indexService .servingBoxOne .servingContentBox .servingContentR .servingContentMore:hover .servingMoreLineL::before {
+  animation: servingLineAnimation 1s ease-out;
+}
+.indexService .servingBoxOne .servingContentBox .servingContentR .servingContentMore:hover .servingMoreLineR::before {
+  animation: servingLineAnimation 1s ease-out 0.2s;
+}
+.indexService .servingBoxTwo {
+  position: relative;
+  width: 100%;
+  height: 110dvh;
+  top: 20dvh;
+  padding: 0px 60px 0px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+@media (max-width: 900px) {
+  .indexService .servingBoxTwo {
+    padding: 0px 60px 0px 60px;
+    justify-content: center;
+  }
+}
+.indexService .servingBoxTwo .servingImg {
+  align-self: self-end;
+  position: relative;
+  width: 800px;
+  height: 450px;
+  padding: 0px 100px 0px 100px;
+}
+@media (max-width: 1120px) {
+  .indexService .servingBoxTwo .servingImg {
+    width: 600px;
+    height: 400px;
+    padding: 0px 0px 0px 0px;
+  }
+}
+@media (max-width: 900px) {
+  .indexService .servingBoxTwo .servingImg {
+    width: 100%;
+    padding: 0px 0px 0px 0px;
+  }
+}
+.indexService .servingBoxTwo .servingImg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.indexService .servingBoxTwo .servingContentBox {
+  position: relative;
+  width: 50%;
+  height: 20dvh;
+  display: flex;
+  flex-direction: row;
+  padding: 50px 100px 0px 100px;
+}
+@media (max-width: 900px) {
+  .indexService .servingBoxTwo .servingContentBox {
+    width: 100%;
+    padding-top: 5%;
+    padding: 50px 0px 0px 0px;
+  }
+}
+.indexService .servingBoxTwo .servingContentBox .servingContentL {
+  position: relative;
+  width: 30px;
+  color: #2c5491;
+  font-family: "Noto Sans TC";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 1.92px;
+}
+.indexService .servingBoxTwo .servingContentBox .servingContentL::after {
+  position: absolute;
+  width: 1.5px;
+  height: 50px;
+  content: "";
+  background-color: #2c5491;
+  top: 25px;
+  left: 6px;
+}
+.indexService .servingBoxTwo .servingContentBox .servingContentR {
+  position: relative;
+  width: calc(100% - 9px);
+  top: -8px;
+  display: flex;
+  flex-direction: column;
+}
+.indexService .servingBoxTwo .servingContentBox .servingContentR .servingTitle {
+  color: rgb(0, 0, 0);
+  font-family: "Noto Sans TC";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 8px;
+  padding: 0;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.indexService .servingBoxTwo .servingContentBox .servingContentR .servingContent {
+  color: #252525;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%; /* 30.38px */
+  letter-spacing: 2px;
+  padding: 0;
+  margin: 0;
+}
+.indexService .servingBoxTwo .servingContentBox .servingContentR .servingContentMore {
+  letter-spacing: 1.68px;
+  width: 150px;
+  align-self: self-end;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  transition: 0.5s ease-in-out;
+}
+.indexService .servingBoxTwo .servingContentBox .servingContentR .servingContentMore .servingMoreLineL {
+  position: relative;
+  content: "";
+  width: 60px;
+  height: 2px;
+  background-color: #2c5491;
+  top: 2px;
+}
+.indexService .servingBoxTwo .servingContentBox .servingContentR .servingContentMore .servingMoreLineL::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background-color: #c3c3c3;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+.indexService .servingBoxTwo .servingContentBox .servingContentR .servingContentMore a {
+  position: relative;
+  font-family: "Noto Sans TC";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: #2c5491;
+  text-decoration: none;
+  transition: 0.5s ease-in-out;
+}
+.indexService .servingBoxTwo .servingContentBox .servingContentR .servingContentMore .servingMoreLineR {
+  position: relative;
+  content: "";
+  width: 40px;
+  height: 2px;
+  background-color: #2c5491;
+  top: 2px;
+  transition: 0.5s ease-in-out;
+}
+.indexService .servingBoxTwo .servingContentBox .servingContentR .servingContentMore .servingMoreLineR::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background-color: #c3c3c3;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+.indexService .servingBoxTwo .servingContentBox .servingContentR .servingContentMore:hover .servingMoreLineL::before {
+  animation: servingLineAnimation 1s ease-out;
+}
+.indexService .servingBoxTwo .servingContentBox .servingContentR .servingContentMore:hover .servingMoreLineR::before {
+  animation: servingLineAnimation 1s ease-out 0.2s;
+}
 
 .indexService.indexBackWhite {
   background-color: rgb(255, 255, 255) !important;
@@ -74,4 +427,23 @@
 
 .indexServiceTitleBox.textOpacity {
   opacity: 1;
+}
+
+@keyframes servingLineAnimation {
+  0% {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  40% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  60% {
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+  100% {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
 }/*# sourceMappingURL=landingPageService.css.map */
