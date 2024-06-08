@@ -1,0 +1,316 @@
+$white: rgb(255, 255, 255);
+$black: rgb(29, 29, 29);
+$backgroundMain: #5d7b9d;
+$textColor: rgb(255, 255, 255);
+$textCOlorB: #2c5491;
+
+footer{
+    position: absolute;
+    top: 790dvh;
+    height: 100dvh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 60px 0px 60px;
+    overflow: hidden;
+    @media (max-width: 776px) {
+
+        flex-direction: column;
+        padding: 60px 60px 0px 60px;
+
+    }
+    @media (max-width: 600px) {
+     
+        top: 830dvh;
+    }
+    .footerL{
+        align-self: self-end;
+        width: 33%;
+        height: 40dvh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: self-start;
+        padding-bottom: 20px;
+        @media (max-width: 776px) {
+            padding-bottom: 0px;
+            justify-content: center;
+            align-self: self-start;
+            width: 100%;
+            height: 20dvh;
+        }
+        .footerNameC{
+            color:$black;
+
+            font-family: "Noto Serif TC";
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            letter-spacing: 8.16px;
+            @media (max-width: 860px) {
+                font-size: 16px;
+            }
+            @media (max-width: 776px) {
+                font-size: 20px;
+            }
+        }
+        .footerNameE{
+            margin: 0;
+            padding: 0;
+            color:$black;
+
+            font-family: "Noto Serif TC";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 180%; /* 36px */
+            letter-spacing: 5px;
+            @media (max-width: 860px) {
+ 
+                font-size: 12px;
+       
+            }
+            @media (max-width: 776px) {
+ 
+                font-size: 12px;
+       
+            }
+
+        }
+    }
+    .footerC{
+        position: relative;
+        width: 300px;
+        height: 25dvh;
+        display: flex;
+        flex-direction:column ;
+        justify-content: space-around;
+        @media (max-width: 776px) {
+            // background-color: #2c5491;
+            width: 200px;
+            left: 15px;
+            align-items: center;
+            height: 25dvh;
+        }
+        .footerEmailBox{
+            width: 100%;
+            // background-color: #2c5491;
+            display: flex;
+            justify-content: space-between;
+            @media (max-width: 776px) {
+                justify-content:center;
+        
+            }
+            .emailTitle{
+                width: 40%;
+
+                color: $black#000;
+
+                font-family: "Noto Serif TC";
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 160%; /* 25.6px */
+                letter-spacing: 1px;
+
+            }
+            .email{
+                width: 60%;
+                align-self: self-start;                
+                // background-color: aliceblue;
+                color: $black#000;
+                font-family: "Noto Sans TC";
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: 1px;
+                @media (max-width: 776px) {
+                    align-self: none;  
+            
+                }
+            }
+        }
+
+        .footerFBBox{
+            width: 100%;
+            // background-color: #2c5491;
+            display: flex;
+            justify-content: space-between;
+            .FBTitle{
+                width: 40%;
+                color: $black#000;
+
+                font-family: "Noto Serif TC";
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 160%; /* 25.6px */
+                letter-spacing: 1px;
+            }
+            .FB{
+                width: 60%;
+                align-self: self-start;  
+
+                color: $black#000;
+                font-family: "Noto Sans TC";
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: 1px;
+            }
+        }
+
+        .footerLineBox{
+            width: 100%;
+            // background-color: #2c5491;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            .LineTitle{
+                width: 40%;
+                color: $black#000;
+
+                font-family: "Noto Serif TC";
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 160%; /* 25.6px */
+                letter-spacing: 1px;
+            }
+            .Line{
+                width: 60%;
+                align-self: self-start;  
+
+                color: $black#000;
+                font-family: "Noto Sans TC";
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: 1px;
+            }
+        }
+
+        .footerIGBox{
+            width: 100%;
+            // background-color: #2c5491;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            .IGTitle{
+                width: 40%;
+                color: $black#000;
+
+                font-family: "Noto Serif TC";
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 160%; /* 25.6px */
+                letter-spacing: 1px;
+            }
+            .IG{
+                width: 60%;
+                align-self: self-start;  
+
+                color: $black#000;
+                font-family: "Noto Sans TC";
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: 1px;
+            }
+        }
+
+        .footerTelBox{
+            width: 100%;
+            // background-color: #2c5491;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            .TelTitle{
+                width: 40%;
+                color: $black#000;
+
+                font-family: "Noto Serif TC";
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 160%; /* 25.6px */
+                letter-spacing: 1px;
+            }
+            .Tel{
+                width: 60%;
+                align-self: self-start;  
+
+                color: $black#000;
+                font-family: "Noto Sans TC";
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: 1px;
+            }
+        }
+    }
+    .footerR{
+        position: relative;
+        top: 20px;
+
+        width: 33%;
+        height: 40dvh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @media (max-width: 776px) {
+            // background-color: #2c5491;
+           
+            height: 35dvh;
+        }  
+        // background-color: #2c5491;
+        .footerQRcode{
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            @media (max-width: 860px) {
+ 
+                width: 150px;            
+                height: 150px;
+            }
+            @media (max-width: 776px) {
+                width: 120px;            
+                height: 120px;
+            }                  
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                mix-blend-mode: darken;
+            }
+        }
+        .footerQrCodeText{
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            color: $black#000;
+            font-family: "Noto Sans TC";
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 160%; /* 32px */
+            letter-spacing: 6px;
+            @media (max-width: 776px) {
+                font-size: 12px;
+            }       
+        }
+    }
+}

@@ -19,7 +19,8 @@ let navChangeColorH=false;
 //text opacity
 
 let indexServiceTitleBox = document.querySelector('.indexServiceTitleBox');
-
+// serving Content
+let servingBoxList = document.querySelectorAll('.servingBox');
 
 let landingVideoTl5 = gsap.timeline({
     scrollTrigger:{
@@ -31,6 +32,20 @@ let landingVideoTl5 = gsap.timeline({
         onEnter:landinPageService_in ,
 
         onEnterBack: landinPageService_out,
+
+    }
+});
+
+let landingVideoTl6 = gsap.timeline({
+    scrollTrigger:{
+        trigger:indexService,
+        start:'10% top',
+        end:'10% 80%',
+        scrub:true,
+        markers:true,
+        onEnter:landinPageServiceContent_in ,
+
+        onEnterBack: landinPageServiceContent_Out,
 
     }
 });
@@ -83,6 +98,28 @@ function landinPageService_out(){
     // nav change color height
     navChangeColorH=false;
 }
+
+function landinPageServiceContent_in(){
+
+
+    //servinContent display
+    servingBoxList.forEach((e) => {
+        e.classList.add("servingBoxDisplay");
+    });
+
+
+};
+function landinPageServiceContent_Out(){
+
+
+    //servinContent display
+    servingBoxList.forEach((e) => {
+        e.classList.remove("servingBoxDisplay");
+    });
+
+
+
+};
 
 
 let hamburgerBoxToggleSer =false;
